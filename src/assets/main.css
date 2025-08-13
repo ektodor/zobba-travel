@@ -1,1 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  /* ===================================
+   * COLORS 色彩系統
+   * =================================== */
+
+  /* primary */
+  --color-primary-120: #2b211c;
+  --color-primary-100: #4a3830;
+  --color-primary-80: #886658;
+  --color-primary-60: #a37f71;
+  --color-primary-40: #cbb6af;
+  --color-primary-10: #f3eeec;
+  /* semantic */
+  /* success */
+  --color-success-120: #48970f;
+  --color-success-100: #7cd31f;
+  --color-success-20: #ddfaa5;
+  --color-success-10: #f0fcd1;
+  /* info */
+  --color-info-120: #1566b5;
+  --color-info-100: #2aaffc;
+  --color-info-20: #a9effe;
+  --color-info-10: #d4f9fe;
+  /* alert/error */
+  --color-alert-120: #b71d4f;
+  --color-alert-100: #ff3a55;
+  --color-alert-20: #ffbbb0;
+  --color-alert-10: #ffe0d7;
+  /* neutral */
+  --color-neutral-100: #000000;
+  --color-neutral-80: #4b4b4b;
+  --color-neutral-60: #909090;
+  --color-neutral-40: #ececec;
+  --color-neutral-15: #f4f4f4;
+  --color-neutral-10: #f9f9f9;
+  --color-neutral-0: #ffffff;
+
+  /* ===================================
+   * TYPOGRAPHY 字體系統
+   * =================================== */
+
+  --font-poppins: "Poppins", sans-serif;
+
+  /* tiny */
+  --text-tiny: 0.75rem;
+  --text-tiny--line-height: 1.5;
+  --text-tiny--letter-spacing: 0.02rem;
+  --text-tiny--font-weight: 400;
+  /* body2 */
+  --text-body2: 0.75rem;
+  --text-body2--line-height: 1.5;
+  --text-body2--letter-spacing: 0.02rem;
+  --text-body2--font-weight: 400;
+  /* body */
+  --text-body: 1rem;
+  --text-body--line-height: 1.5;
+  --text-body--letter-spacing: 0.02rem;
+  --text-body--font-weight: 400;
+  /* Subtitle */
+  --text-subtitle: 0.75rem;
+  --text-subtitle--line-height: 1.5;
+  --text-subtitle--letter-spacing: 0.02rem;
+  --text-subtitle--font-weight: 700;
+  /* Title */
+  --text-title: 1rem;
+  --text-title--line-height: 1.5;
+  --text-title--letter-spacing: 0.02rem;
+  --text-title--font-weight: 700;
+  /* h6 */
+  --text-h6: 1.25rem;
+  --text-h6--line-height: 1.2;
+  --text-h6--letter-spacing: 0.02rem;
+  --text-h6--font-weight: 700;
+  /* h5 */
+  --text-h5: 1.5rem;
+  --text-h5--line-height: 1.2;
+  --text-h5--letter-spacing: 0.02rem;
+  --text-h5--font-weight: 700;
+  /* h4 */
+  --text-h4: 1.75rem;
+  --text-h4--line-height: 1.2;
+  --text-h4--letter-spacing: 0.02rem;
+  --text-h4--font-weight: 400;
+  /* h3 */
+  --text-h3: 2rem;
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: 0.02rem;
+  --text-h3--font-weight: 700;
+  /* h2 */
+  --text-h2: 2.5rem;
+  --text-h2--line-height: 1.2;
+  --text-h2--letter-spacing: 0.02rem;
+  --text-h2--font-weight: 700;
+  /* h1 */
+  --text-h1: 3rem;
+  --text-h1--line-height: 1.2;
+  --text-h1--letter-spacing: 0.02rem;
+  --text-h1--font-weight: 700;
+  /* display */
+  --text-display: 4.5rem;
+  --text-display--line-height: 1.2;
+  --text-display--letter-spacing: 0.02rem;
+  --text-display--font-weight: 700;
+
+  /* ===================================
+   * 其他系統
+   * =================================== */
+  --shadow-base: 0px 0px 0px 4px #4a38301a;
+
+  /* ===================================
+   * 按鈕系統
+   * =================================== */
+  --btn-p-default: 1rem 2rem;
+  --btn-p-sm: 0.75rem 1rem;
+}
+
+@layer base {
+  body {
+    @apply font-poppins text-neutral-100;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply text-neutral-80 text-body bg-neutral-0 border-neutral-40 rounded-xl border p-4;
+    @apply placeholder:text-neutral-60;
+    @apply focus-visible:border-primary-100 focus-visible:shadow-base focus-visible:outline-0;
+  }
+  .btn-secondary {
+    @apply bg-neutral-0 text-primary-100 text-title;
+    @apply hover:bg-primary-100 hover:text-neutral-0;
+    @apply disabled:text-neutral-60 disabled:bg-transparent;
+  }
+  .btn-primary {
+    @apply bg-primary-100 text-neutral-0 text-title;
+    @apply hover:bg-primary-120;
+    @apply disabled:text-neutral-60 disabled:bg-transparent;
+  }
+}
+
+@utility btn-* {
+  cursor: pointer;
+  padding: --value(--btn-p-*);
+  border: 1px solid var(--color-primary-100);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
