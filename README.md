@@ -71,3 +71,114 @@ npm install gh-pages --save-dev
   </svg>
 </div>
 ```
+
+## Container 使用方法
+
+**v4 版本要使用 `@utilites` 自定義 container 配置，雖然 v4 文件沒有 container，但是其實還可以用。所以可以不用特別設定 `@variant sm{...}`**
+
+### 客製化 container
+
+```js
+// v3
+// tailwind.config.js
+
+module.exports = {
+  theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
+    },
+  },
+};
+```
+
+```css
+/* v4 */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @variant sm {
+    padding-inline: 2rem;
+  }
+
+  @variant lg {
+    padding-inline: 4rem;
+  }
+
+  @variant xl {
+    padding-inline: 5rem;
+  }
+}
+```
+
+### 模擬 bootstrap 斷點
+
+```css
+
+@theme{
+...
+  /* 576px */
+  --breakpoint-sm: 36rem;
+  /* 768px */
+  --breakpoint-md: 48rem;
+  /* 992px */
+  --breakpoint-lg: 62rem;
+  /* 1200px */
+  --breakpoint-xl: 75rem;
+  /* 1400px */
+  --breakpoint-2xl: 87.5rem;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 0.75rem;
+  @variant sm {
+    /* 540px */
+    max-width: 33.75rem;
+  }
+  @variant md {
+    /* 720px */
+    max-width: 45rem;
+  }
+  @variant lg {
+    /* 960px */
+    max-width: 60rem;
+  }
+  @variant xl {
+    /* 1140px */
+    max-width: 71.25rem;
+  }
+  @variant 2xl {
+    /* 1320px */s
+    max-width: 82.5rem;
+  }
+}
+```
+
+### container (傳統容器)
+
+- 用途： 設定最大寬度和置中
+- 響應： 基於視窗寬度 (viewport)
+- 斷點： 螢幕大小斷點
+- 範例： container mx-auto
+
+### @container (容器查詢)
+
+- 用途： 基於父容器大小的響應式設計
+- 響應： 基於容器寬度
+- 斷點： 容器大小斷點
+- 範例： @container @md:flex-row
+
+### 參考資料
+
+- [Tailwindcss v4 更新手冊](https://tailwindcss.com/docs/upgrade-guide#container-configuration)
+- [Tailwindcss v3 container](https://v3.tailwindcss.com/docs/container)
+- [Bootstrap 斷點](https://getbootstrap.com/docs/5.3/layout/containers/)
+- [What are Container Queries and how to use them in Tailwind CSS](https://www.youtube.com/watch?v=5j0WNclnsPk)
