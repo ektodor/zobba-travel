@@ -109,6 +109,7 @@
    * 其他系統
    * =================================== */
   --shadow-base: 0px 0px 0px 4px #4a38301a;
+  --shadow-checkbox: 0px 0px 0px 2px #4a383033;
 
   /* ===================================
    * 按鈕系統
@@ -128,6 +129,7 @@
     @apply text-neutral-80 text-body bg-neutral-0 border-neutral-40 rounded-xl border p-4;
     @apply placeholder:text-neutral-60;
     @apply focus-visible:border-primary-100 focus-visible:shadow-base focus-visible:outline-0;
+    @apply invalid:border-alert-100;
   }
   .btn-secondary {
     @apply bg-neutral-0 text-primary-100 text-title;
@@ -138,6 +140,36 @@
     @apply bg-primary-100 text-neutral-0 text-title;
     @apply hover:bg-primary-120;
     @apply disabled:text-neutral-60 disabled:bg-transparent;
+  }
+
+  .tab {
+    @apply text-body text-neutral-60 inline-block;
+    &.active {
+      @apply text-title text-primary-100;
+      &::after {
+        content: "";
+        display: block;
+        border-radius: 0.75rem;
+        height: 0.25rem;
+        width: 100%;
+        background-color: var(--color-primary-100);
+        margin-top: 0.75rem;
+      }
+    }
+  }
+
+  .checkbox {
+    @apply relative flex w-fit items-center justify-center;
+  }
+
+  .checkbox-input {
+    @apply bg-neutral-0 border-neutral-40 size-6 appearance-none rounded-sm border;
+    @apply hover:shadow-checkbox;
+    @apply checked:bg-primary-100 checked:border-none;
+  }
+
+  .checkbox-icon {
+    @apply pointer-events-none invisible absolute top-0 left-0 size-6;
   }
 }
 
