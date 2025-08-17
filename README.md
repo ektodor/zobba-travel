@@ -182,3 +182,78 @@ module.exports = {
 - [Tailwindcss v3 container](https://v3.tailwindcss.com/docs/container)
 - [Bootstrap 斷點](https://getbootstrap.com/docs/5.3/layout/containers/)
 - [What are Container Queries and how to use them in Tailwind CSS](https://www.youtube.com/watch?v=5j0WNclnsPk)
+
+## 客製化 offcanvas
+
+- 需要offcanvas、背景遮罩、開關
+- 背景遮罩
+  - `inset-0`：表示 `top`、`bottom`、`left`、`right` 都為 0
+  - `z-49`：需要比 offcanvas 低
+  - `fixed`：用瀏覽器視窗定位整個螢幕
+  - 使用 `useEffect` 添加 `overflow-hidden` 讓整個頁面無法滑動
+- offcanvas
+  - 使用 `translate-x-full` 將視窗移到視窗外面，當 offcanvas 打開時使用 `translate-x-0` 出現
+  - `z-50`：需要比背景遮罩高
+- 如果有 `nav` 可以使用 `onclick` 呼叫 `setIsOffcanvasOpen`
+
+```jsx
+export function OffcanvasComponent({ isOffcanvasOpen, setIsOffcanvasOpen }) {
+  // 讓整個頁面無法滑動
+  useEffect(() => {
+    if (isOffcanvasOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOffcanvasOpen]);
+  return (
+    <>
+      {/* 背景遮罩 */}
+      {isOffcanvasOpen && (
+        <div
+          className="fixed inset-0 z-49 bg-black opacity-40"
+          onClick={() => setIsOffcanvasOpen(false)}
+        />
+      )}
+
+      {/* offcanvas */}
+      <div
+        className={`${isOffcanvasOpen ? "translate-x-0" : "translate-x-full"} fixed top-0 right-0 z-50 h-screen w-[327px] transform bg-white p-6 transition-transform duration-300 ease-in-out`}
+      >
+        {/* 內容 */}
+      </div>
+    </>
+  );
+}
+```
+
+## 變更 SVG 顏色
+
+- 利用 mask 變更 svg 顏色
+- `mask-alpha`
+- `mask-cover`
+- `mask-[url(...)]`：ICON 路徑
+- `bg-[color]`：SVG 要的顏色
+
+```jsx
+/**
+ * @url icon 位置
+ * @color 顏色，以 tailwindcss 色彩為主，如 bg-alert-10 => color='alert-10'
+ * @size 大小，根據 tailwindcss 的 utility 名稱，如 16px => size-4 => size='4'
+ * @otherClass 其他樣式
+ */
+export function SVGCoolorComponent({ url, color, size = 6, otherClass }) {
+  return (
+    <div
+      className={`size-${size} bg-${color} mask-[url(${url})] mask-alpha mask-cover ${otherClass}`}
+    ></div>
+  );
+}
+```
+
+### 參考資料
+
+- [mask-mode](https://css-tricks.com/almanac/properties/m/mask/mask-mode/)
