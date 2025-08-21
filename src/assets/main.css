@@ -50,7 +50,7 @@
   --text-tiny--letter-spacing: 0.02rem;
   --text-tiny--font-weight: 400;
   /* body2 */
-  --text-body2: 0.75rem;
+  --text-body2: 0.875rem;
   --text-body2--line-height: 1.5;
   --text-body2--letter-spacing: 0.02rem;
   --text-body2--font-weight: 400;
@@ -60,7 +60,7 @@
   --text-body--letter-spacing: 0.02rem;
   --text-body--font-weight: 400;
   /* Subtitle */
-  --text-subtitle: 0.75rem;
+  --text-subtitle: 0.875rem;
   --text-subtitle--line-height: 1.5;
   --text-subtitle--letter-spacing: 0.02rem;
   --text-subtitle--font-weight: 700;
@@ -131,11 +131,24 @@
   --breakpoint-xl: 75rem;
   /* 1400px */
   --breakpoint-2xl: 87.5rem;
+
+  --animate-marquee: marquee 10s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-150%);
+    }
+  }
 }
 
 @layer base {
   body {
     @apply font-poppins text-neutral-100;
+  }
+  button {
+    @apply cursor-pointer;
   }
 }
 
@@ -223,4 +236,18 @@
     /* 1320px */
     max-width: 82.5rem;
   }
+}
+
+@utility drop-shadow-* {
+  filter: drop-shadow(---value(--color-*));
+}
+
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility clip-triangnle {
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
