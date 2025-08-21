@@ -131,6 +131,16 @@
   --breakpoint-xl: 75rem;
   /* 1400px */
   --breakpoint-2xl: 87.5rem;
+
+  --animate-marquee: marquee 10s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-150%);
+    }
+  }
 }
 
 @layer base {
@@ -232,5 +242,12 @@
   filter: drop-shadow(---value(--color-*));
 }
 
-@utility change-svg-color {
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility clip-triangnle {
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
