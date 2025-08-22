@@ -1,4 +1,5 @@
 import { SVGCoolorComponent } from "@/components/SVGColorComponent";
+import { NavLink } from "react-router";
 export function InspirationCard({
   index,
   image,
@@ -38,7 +39,10 @@ export function InspirationCard({
             </span>
             <p className="text-body2 lg:text-body">{suggest}</p>
           </div>
-          <button className="btn btn-default btn-primary flex w-full justify-between rounded-[100px] bg-black px-5">
+          <NavLink
+            to={"location-search"}
+            className="btn btn-default btn-primary flex w-full justify-between rounded-[100px] bg-black px-5"
+          >
             {btnContext}
             <div className="rounded-[100px] bg-white p-1">
               <SVGCoolorComponent
@@ -47,7 +51,7 @@ export function InspirationCard({
                 size="6"
               />
             </div>
-          </button>
+          </NavLink>
         </div>
         <span className="absolute -top-10 left-4 text-[100px] leading-[1.2] font-normal text-[#DFD2CD] italic lg:-top-[100px] lg:text-[200px]">
           {index + 1}

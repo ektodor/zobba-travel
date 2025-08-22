@@ -171,17 +171,17 @@
   }
 
   .tab {
-    @apply text-body text-neutral-60 inline-block;
+    @apply text-body text-neutral-60 inline-block py-4;
     &.active {
-      @apply text-title text-primary-100;
+      @apply text-title text-primary-100 pb-0;
       &::after {
         content: "";
         display: block;
         border-radius: 0.75rem;
         height: 0.25rem;
-        width: 100%;
+        width: 2rem;
         background-color: var(--color-primary-100);
-        margin-top: 0.75rem;
+        margin: 0.75rem auto 0;
       }
     }
   }
