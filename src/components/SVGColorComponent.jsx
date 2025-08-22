@@ -5,9 +5,10 @@
  * @otherClass 其他樣式
  */
 export function SVGCoolorComponent({ url, color, size = 6, otherClass = "" }) {
+  const hoverColor = color != "white" ? "group-hover:bg-white" : "";
   return (
     <div
-      className={`size-${size} bg-${color} mask-alpha mask-cover ${otherClass}`}
+      className={`size-${size} bg-${color} mask-alpha mask-cover ${hoverColor} ${otherClass}`}
       style={{ maskImage: `url(${url})` }}
     ></div>
   );

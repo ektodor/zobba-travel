@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { NavLink } from "react-router";
 export function OffcanvasComponent({
   profile = {
-    avatar: "/icons/ic_profile.svg",
+    avatar: "./icons/ic_profile.svg",
     name: "訪客",
     mail: "未登入",
     isLogin: false,
@@ -36,7 +36,7 @@ export function OffcanvasComponent({
       >
         <div className="mb-4 flex items-center">
           <button onClick={() => setIsOffcanvasOpen(false)} className="ms-auto">
-            <img src="/icons/ic_close.svg" alt="close" />
+            <img src="./icons/ic_close.svg" alt="close" />
           </button>
         </div>
         <div className="border-neutral-40 flex items-center gap-2 border-b pb-4">
@@ -58,7 +58,7 @@ export function OffcanvasComponent({
                 to="/"
                 onClick={() => setIsOffcanvasOpen(false)}
               >
-                <img src="/icons/ic_order.svg" alt="order" />
+                <img src="./icons/ic_order.svg" alt="order" />
                 <p className="text-neutral-80 text-body2">訂單管理</p>
               </NavLink>
               <NavLink
@@ -66,7 +66,7 @@ export function OffcanvasComponent({
                 to="/"
                 onClick={() => setIsOffcanvasOpen(false)}
               >
-                <img src="/icons/ic_favorite-default.svg" alt="favorite" />
+                <img src="./icons/ic_favorite-default.svg" alt="favorite" />
                 <p className="text-neutral-80 text-body2">我的收藏</p>
               </NavLink>
               <NavLink
@@ -74,13 +74,13 @@ export function OffcanvasComponent({
                 to="/"
                 onClick={() => setIsOffcanvasOpen(false)}
               >
-                <img src="/icons/ic_setting.svg" alt="setting" />
+                <img src="./icons/ic_setting.svg" alt="setting" />
                 <p className="text-neutral-80 text-body2">帳號設定</p>
               </NavLink>
             </div>
             <div className="mt-auto py-3">
               <button className="flex gap-2">
-                <img src="/icons/ic_logout.svg" alt="logout" />
+                <img src="./icons/ic_logout.svg" alt="logout" />
                 <p className="text-neutral-80 text-body">登出</p>
               </button>
             </div>

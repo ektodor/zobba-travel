@@ -42,7 +42,7 @@ export function InspirationCard({
             {btnContext}
             <div className="rounded-[100px] bg-white p-1">
               <SVGCoolorComponent
-                url="/icons/ic_ArrowRight.svg"
+                url="./icons/ic_ArrowRight.svg"
                 color="black"
                 size="6"
               />

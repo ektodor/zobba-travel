@@ -7,25 +7,25 @@ export function Index() {
   const prePurchaseList = [
     {
       id: 1,
-      imageUrl: "/images/index/recommend.png",
+      imageUrl: "./images//index/recommend.png",
       title: "峇里島渡假漫遊",
       context: "精選五星級海灘度假村，專屬私人管家服務，讓您徹底放鬆身心。",
     },
     {
       id: 2,
-      imageUrl: "/images/index/recommend-1.png",
+      imageUrl: "./images//index/recommend-1.png",
       title: "日本深度賞櫻計畫",
       context: "春季限定，東京、京都、大阪賞櫻之旅，體驗日本文化的精髓。",
     },
     {
       id: 3,
-      imageUrl: "/images/index/recommend-2.png",
+      imageUrl: "./images//index/recommend-2.png",
       title: "紐西蘭雪山探險",
       context: "探索南島壯麗的自然風光，體驗各種極限運動和戶外活動。",
     },
     {
       id: 4,
-      imageUrl: "/images/index/recommend-3.png",
+      imageUrl: "./images//index/recommend-3.png",
       title: "摩洛哥迷幻之旅",
       context: "漫步沙漠與古城之間，探索千年文化與色彩繽紛的市集風情。",
     },
@@ -33,7 +33,7 @@ export function Index() {
   const inspirationList = [
     {
       id: "1",
-      image: "/images/index/map-1.png",
+      image: "./images//index/map-1.png",
       tags: ["亞洲", "日本京都"],
       title: "走進四季交織的文化時光",
       context: "穿過紅葉與古寺的交錯，感受從櫻花盛開到秋楓染紅的日式浪漫。",
@@ -42,7 +42,7 @@ export function Index() {
     },
     {
       id: "2",
-      image: "/images/index/map-2.png",
+      image: "./images//index/map-2.png",
       tags: ["亞洲", "南韓首爾"],
       title: "從街邊美食到韓劇場景",
       context: "白天在弘大小巷探店，夜晚登上南山塔俯瞰整座城市的閃爍。",
@@ -51,7 +51,7 @@ export function Index() {
     },
     {
       id: "3",
-      image: "/images/index/map-3.png",
+      image: "./images//index/map-3.png",
       tags: ["歐洲", "法國巴黎"],
       title: "在藝術與咖啡香中迷路",
       context: "穿梭左岸書店與畫廊，任由麵包香與建築細節擁抱你的步伐。",
@@ -60,7 +60,7 @@ export function Index() {
     },
     {
       id: "4",
-      image: "/images/index/map-4.png",
+      image: "./images//index/map-4.png",
       tags: ["大洋洲", "澳洲雪梨"],
       title: "城市與大自然的交會",
       context: "清晨在海灘做瑜珈，午後漫步歌劇院，享受城市的節奏與野性的呼喚。",
@@ -69,7 +69,7 @@ export function Index() {
     },
     {
       id: "5",
-      image: "/images/index/map-5.png",
+      image: "./images//index/map-5.png",
       tags: ["非洲", "埃及開羅"],
       title: "穿越千年時光的沙漠冒險",
       context:
@@ -80,7 +80,7 @@ export function Index() {
   ];
   const journeyList = [
     {
-      image: "/images/index/journey-1.png",
+      image: "./images//index/journey-1.png",
       title: "獨家優惠】布萊頓彩色小屋＋森林蒸汽火車一日遊",
       tags: ["即買即用", "5 天前可免費取消"],
       star: "4.2",
@@ -90,7 +90,7 @@ export function Index() {
       price: 5220,
     },
     {
-      image: "/images/index/journey-2.png",
+      image: "./images//index/journey-2.png",
       title: "無尾熊動物園＋企鵝歸巢雙享之旅",
       tags: ["即買即用", "7 天前可免費取消"],
       star: "4.2",
@@ -100,7 +100,7 @@ export function Index() {
       price: 4920,
     },
     {
-      image: "/images/index/journey-3.png",
+      image: "./images//index/journey-3.png",
       title: "大洋路經典一日遊｜中文導覽！體驗澳洲最夢幻的海岸線",
       tags: ["中文導覽", "5 天前可免費取消"],
       star: "4.2",
@@ -110,7 +110,7 @@ export function Index() {
       price: 4500,
     },
     {
-      image: "/images/index/journey-4.png",
+      image: "./images//index/journey-4.png",
       title:
         "墨爾本市區導覽｜壁畫巷＋隱藏咖啡廳之旅，體驗本地咖啡文化、隱藏小巷拍照",
       tags: ["專業導覽", "3 天前可免費取消"],
@@ -142,7 +142,7 @@ export function Index() {
               <div className="relative w-full">
                 <SVGCoolorComponent
                   color={"neutral-60"}
-                  url={"/icons/ic_Search.svg"}
+                  url={"./icons/ic_Search.svg"}
                   size={6}
                   otherClass="absolute top-1/2 left-2 -translate-y-1/2"
                 />
@@ -177,7 +177,7 @@ export function Index() {
                 查看全部行程
                 <SVGCoolorComponent
                   color="white"
-                  url="/icons/ic_ArrowRight.svg"
+                  url="./icons/ic_ArrowRight.svg"
                   size="4"
                   otherClass="ms-2"
                 />
@@ -214,10 +214,10 @@ export function Index() {
       {/* 踏上旅程的第一站 */}
       <section className="relative pt-10 pb-12 lg:py-[120px]">
         <div className="absolute top-[120px] -z-10 hidden lg:block">
-          <img src="/images/index/deco-bg.svg" alt="bg" />
+          <img src="./images/index/deco-bg.svg" alt="bg" />
         </div>
         <div className="absolute bottom-60 left-20 -z-10 hidden lg:block">
-          <img src="/images/index/deco-text.svg" alt="deco text" />
+          <img src="./images/index/deco-text.svg" alt="deco text" />
         </div>
         <div className="container items-center justify-between lg:flex">
           <div className="mb-10 lg:order-2">
@@ -240,7 +240,7 @@ export function Index() {
             <div className="gap-6 lg:mb-5 lg:flex lg:pr-20">
               <div className="border-neutral-40 mb-4 overflow-hidden rounded-2xl border lg:mb-0 lg:max-w-[306px]">
                 <div>
-                  <img src="/images/index/intro-1.png" alt="card" />
+                  <img src="./images/index/intro-1.png" alt="card" />
                 </div>
                 <div className="p-6">
                   <h4 className="text-h6 mb-2">ZOBAA 專屬推薦行程</h4>
@@ -251,7 +251,7 @@ export function Index() {
               </div>
               <div className="border-neutral-40 mb-4 overflow-hidden rounded-2xl border lg:mb-0 lg:max-w-[306px]">
                 <div>
-                  <img src="/images/index/intro-2.png" alt="card" />
+                  <img src="./images/index/intro-2.png" alt="card" />
                 </div>
                 <div className="p-6">
                   <h4 className="text-h6 mb-2">旅人攻略集合</h4>
@@ -264,7 +264,7 @@ export function Index() {
             <div className="gap-6 lg:flex lg:pl-20">
               <div className="border-neutral-40 mb-4 overflow-hidden rounded-2xl border lg:mb-0 lg:max-w-[306px]">
                 <div>
-                  <img src="/images/index/intro-3.png" alt="card" />
+                  <img src="./images/index/intro-3.png" alt="card" />
                 </div>
                 <div className="p-6">
                   <h4 className="text-h6 mb-2">優惠機票、酒店</h4>
@@ -275,7 +275,7 @@ export function Index() {
               </div>
               <div className="border-neutral-40 overflow-hidden rounded-2xl border lg:max-w-[306px]">
                 <div>
-                  <img src="/images/index/intro-4.png" alt="card" />
+                  <img src="./images/index/intro-4.png" alt="card" />
                 </div>
                 <div className="p-6">
                   <h4 className="text-h6 mb-2">銀行專屬優惠</h4>
@@ -301,7 +301,7 @@ export function Index() {
                 </h2>
                 <div className="absolute -top-12 -right-[100px] w-[130px]">
                   <img
-                    src="/images/index/deco-text-1.svg"
+                    src="./images//index/deco-text-1.svg"
                     alt="deco-text-1"
                     className="w-full"
                   />
@@ -338,17 +338,18 @@ export function Index() {
               <p>一場風格與故事感兼具的靈感旅行，就從這裡開始。</p>
 
               <div className="mt-6 hidden justify-end gap-2 lg:flex">
-                <button className="btn-default btn-secondary border-0 px-4">
+                <button className="btn-default btn-secondary group border-0 px-4">
                   <SVGCoolorComponent
                     color={"black"}
-                    url={"/icons/ic_ArrowLeft.svg"}
+                    url={"./icons/ic_ArrowLeft.svg"}
                     size={6}
+                    hoverColor="white"
                   />
                 </button>
-                <button className="btn-default btn-secondary border-0 px-4">
+                <button className="btn-default btn-secondary group border-0 px-4">
                   <SVGCoolorComponent
                     color={"black"}
-                    url={"/icons/ic_ArrowRight.svg"}
+                    url={"./icons/ic_ArrowRight.svg"}
                     size={6}
                   />
                 </button>
@@ -392,7 +393,7 @@ export function Index() {
         <div className="container">
           <div className="relative mb-10 lg:mb-20">
             <div className="absolute -top-5 -left-2 -z-10 size-[52px] lg:-top-12 lg:-left-12 lg:size-[120px]">
-              <img src="/images/index/bg-deco.svg" alt="bg" />
+              <img src="./images/index/bg-deco.svg" alt="bg" />
             </div>
             <h2 className="text-primary-100 text-h3 lg:text-display mb-2">
               搜尋墨爾本嗎？
@@ -403,17 +404,17 @@ export function Index() {
           </div>
           {/* journey */}
           <div className="relative -mx-3">
-            <button className="btn-default btn-secondary absolute top-1/2 -left-20 hidden border-0 px-4 shadow-[0px_4px_12px_0px] shadow-[#00000026] lg:block">
+            <button className="btn-default btn-secondary group absolute top-1/2 -left-20 hidden border-0 px-4 shadow-[0px_4px_12px_0px] shadow-[#00000026] 2xl:block">
               <SVGCoolorComponent
                 color={"black"}
-                url={"/icons/ic_ArrowLeft.svg"}
+                url={"./icons/ic_ArrowLeft.svg"}
                 size={6}
               />
             </button>
-            <button className="btn-default btn-secondary absolute top-1/2 -right-20 hidden border-0 px-4 shadow-[0px_4px_12px_0px] shadow-[#00000026] lg:block">
+            <button className="btn-default btn-secondary group absolute top-1/2 -right-20 hidden border-0 px-4 shadow-[0px_4px_12px_0px] shadow-[#00000026] 2xl:block">
               <SVGCoolorComponent
                 color={"black"}
-                url={"/icons/ic_ArrowRight.svg"}
+                url={"./icons/ic_ArrowRight.svg"}
                 size={6}
               />
             </button>
@@ -454,23 +455,23 @@ export function Index() {
       {/* 把旅行變成生活的養分 */}
       <section className="bg-primary-40 relative -z-0 overflow-hidden py-10">
         <div className="absolute -top-[360px] -left-[240px] -z-10">
-          <img src="/images/index/bg-down.svg" alt="bg" />
+          <img src="./images/index/bg-down.svg" alt="bg" />
         </div>
         <div className="absolute bottom-[295px] -z-10">
-          <img src="/images/index/bg-line.svg" alt="bg" />
+          <img src="./images/index/bg-line.svg" alt="bg" />
         </div>
         <div className="absolute right-10 -bottom-[420px] -z-10">
-          <img src="/images/index/bg-down.svg" alt="bg" />
+          <img src="./images/index/bg-down.svg" alt="bg" />
         </div>
         <div className="container">
           <div className="mb-2 md:mb-6">
             <img
-              src="/images/index/card-sm.png"
+              src="./images//index/card-sm.png"
               alt="card"
               className="object-center md:hidden"
             />
             <img
-              src="/images/index/card.png"
+              src="./images//index/card.png"
               alt="card"
               className="hidden object-center md:block"
             />
@@ -505,7 +506,7 @@ export function Index() {
               立即探索我們的精心旅程
               <div className="rounded-[100px] bg-white p-1">
                 <SVGCoolorComponent
-                  url="/icons/ic_ArrowRight.svg"
+                  url="./icons/ic_ArrowRight.svg"
                   color="black"
                   size="6"
                 />

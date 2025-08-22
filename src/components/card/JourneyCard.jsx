@@ -14,7 +14,7 @@ export function JourneyCard({
       <SVGCoolorComponent
         color={"white"}
         size={6}
-        url={"/icons/ic_favorite-default.svg"}
+        url={"./icons/ic_favorite-default.svg"}
         otherClass={"absolute top-4 right-4"}
       />
       <div className="mb-4 overflow-hidden rounded-[20px]">
@@ -36,7 +36,7 @@ export function JourneyCard({
             })}
           </div>
           <div className="flex items-center">
-            <img src="/icons/ic_star.svg" alt="star" />
+            <img src="./icons/ic_star.svg" alt="star" />
             <p className="border-neutral-40 text-body2 text-neutral-80 ml-1 border-r pr-3">
               {star}
               <small className="text-body2 text-neutral-60 ml-1">

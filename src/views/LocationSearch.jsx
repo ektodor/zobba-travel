@@ -6,7 +6,7 @@ export function LocationSearch() {
       LocationSearch
       <input type="text" className="input-field" placeholder="text" />
       <button className="btn-default btn-primary">
-        <img src="/icons/ic_VISA.svg" alt="" />
+        <img src="./icons/ic_VISA.svg" alt="" />
         test
       </button>
       <button className="btn-sm btn-secondary">test2</button>

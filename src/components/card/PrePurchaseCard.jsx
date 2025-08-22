@@ -12,11 +12,11 @@ export function PrePurchaseCard({ imageUrl, title, context }) {
       <div className="absolute right-6 bottom-6 left-6 lg:right-8 lg:bottom-8 lg:left-8">
         <h4 className="text-h4 lg:text-h2 mb-2">{title}</h4>
         <p className="text-body2 lg:text-body mb-6">{context}</p>
-        <button className="btn-default btn-secondary flex w-full justify-between rounded-[100px] border-0 px-5 group-hover/item:flex lg:hidden lg:py-5">
+        <button className="btn-default btn-secondary group flex w-full justify-between rounded-[100px] border-0 px-5 group-hover/item:flex lg:hidden lg:py-5">
           訂購行程
           <SVGCoolorComponent
             color="black"
-            url="/icons/ic_ArrowRight.svg"
+            url="./icons/ic_ArrowRight.svg"
             size="6"
           />
         </button>

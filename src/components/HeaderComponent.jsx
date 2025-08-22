@@ -5,7 +5,7 @@ import { SearchComponent } from "./SearchComponent";
 
 export function HeaderComponent() {
   const profile = {
-    avatar: "/images/user/avatar-1.png",
+    avatar: "./images/user/avatar-1.png",
     name: "Jessica",
     mail: "jessica.yen@gamil.com",
     isLogin: true,
@@ -34,7 +34,7 @@ export function HeaderComponent() {
             to="/"
             className={`${searchState ? "hidden" : "lg:mr-6 lg:block"} `}
           >
-            <img src="/images/primary-logo.svg" alt="logo" />
+            <img src="./images/primary-logo.svg" alt="logo" />
           </NavLink>
           <div className={`${searchState ? "w-full" : "ms-auto lg:ms-0"}`}>
             <SearchComponent
@@ -44,12 +44,12 @@ export function HeaderComponent() {
           </div>
           <div className={`${searchState ? "hidden" : ""} lg:ms-auto lg:mr-4`}>
             <button className="px-3 py-2">
-              <img src="/icons/ic_Cart.svg" alt="cart" />
+              <img src="./icons/ic_Cart.svg" alt="cart" />
             </button>
           </div>
           <div className={`${searchState ? "hidden" : ""} lg:hidden`}>
             <button className="p-2" onClick={() => setIsOffcanvasOpen(true)}>
-              <img src="/icons/ic_menu.svg" alt="nav" />
+              <img src="./icons/ic_menu.svg" alt="nav" />
             </button>
           </div>
           <div
@@ -59,7 +59,7 @@ export function HeaderComponent() {
               onClick={() => setSearchState(false)}
               className="p-2 lg:px-3"
             >
-              <img src="/icons/ic_close.svg" alt="close" />
+              <img src="./icons/ic_close.svg" alt="close" />
             </button>
           </div>
           <div className={`hidden lg:block`}>
