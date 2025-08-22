@@ -5,11 +5,11 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: process.env.NODE_ENV === "production" ? "zobba-travel" : "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
       "@images": path.resolve(__dirname, "src/assets/images"),
     },
   },
-  base: process.env.NODE_ENV === "production" ? "zobba-travel" : "/",
 });

@@ -9,7 +9,7 @@ export function FooterComponent() {
             {/* logo */}
             <div className="mb-10 md:mb-8">
               <NavLink to="/">
-                <img src="/images/footer-logo.svg" alt="logo" />
+                <img src="./images/footer-logo.svg" alt="logo" />
               </NavLink>
             </div>
             {/* 連結 */}
@@ -32,13 +32,13 @@ export function FooterComponent() {
             {/* 社交媒體 */}
             <div className="mb-4 flex items-center gap-4 md:justify-end">
               <button>
-                <img src="/icons/btn_line.svg" alt="line" />
+                <img src="./icons/btn_line.svg" alt="line" />
               </button>
               <button>
-                <img src="/icons/btn_yt.svg" alt="yt" />
+                <img src="./icons/btn_yt.svg" alt="yt" />
               </button>
               <button>
-                <img src="/icons/btn_fb.svg" alt="fb" />
+                <img src="./icons/btn_fb.svg" alt="fb" />
               </button>
             </div>
             <p className="text-body2 text-neutral-300">

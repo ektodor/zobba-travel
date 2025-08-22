@@ -14,7 +14,7 @@ export function SearchComponent({ searchState, setSearchState }) {
       >
         <SVGCoolorComponent
           color={"neutral-60"}
-          url={"/icons/ic_Search.svg"}
+          url={"./icons/ic_Search.svg"}
           size={6}
         />
       </button>

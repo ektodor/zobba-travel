@@ -313,6 +313,12 @@ export function SVGCoolorComponent({ url, color, size = 6, otherClass }) {
 </div>
 ```
 
+## 圖片路徑問題（圖片位置在 public/...）
+
+- 在本機測試都使用 `/images/..` 都正常，但是部署到 gh-page 會有問題
+- Tailwindcss 使用 `bg-[url(/images/index/hero-bg.png)]`
+- img 使用 `<img src="./icons/ic_VISA.svg" alt="" />`
+
 ## 踩坑紀錄
 
 ### tailwindcss 圖片無法使用參數傳遞到 Component
