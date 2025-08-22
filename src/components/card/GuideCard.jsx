@@ -1,8 +1,8 @@
 import { SVGCoolorComponent } from "../SVGColorComponent";
-
+import { NavLink } from "react-router";
 export function GuideCard({ image, tags, title, context }) {
   return (
-    <div className="items-center gap-8 rounded-4xl bg-white p-4 lg:flex lg:p-8">
+    <div className="group/guide items-center gap-8 rounded-4xl bg-white p-4 lg:flex lg:p-8">
       <div className="mb-4 h-[232px] overflow-hidden rounded-2xl lg:mb-0 lg:min-w-[480px]">
         <img src={image} alt="guide" className="h-full w-full object-cover" />
       </div>
@@ -20,17 +20,24 @@ export function GuideCard({ image, tags, title, context }) {
           })}
         </div>
         <div className="mb-10">
-          <h4 className="text-h4 lg:text-h2 mb-2">{title}</h4>
-          <p className="text-body2 text-neutral-80 lg:text-body">{context}</p>
+          <h4 className="text-h4 lg:text-h2 group-hover/guide:text-primary-100 mb-2 transition-all duration-300">
+            {title}
+          </h4>
+          <p className="text-body2 text-neutral-80 lg:text-body group-hover/guide:text-primary-60 transition-all duration-300">
+            {context}
+          </p>
         </div>
-        <button className="text-primary-100 text-title flex w-full items-center gap-2 lg:justify-end">
+        <NavLink
+          to={"/product"}
+          className="text-primary-100 text-title flex w-fit items-center gap-2 rounded-2xl px-4 lg:ms-auto lg:justify-end"
+        >
           查看文章
           <SVGCoolorComponent
             color={"black"}
             url={"./icons/ic_ArrowRight.svg"}
             size={6}
           />
-        </button>
+        </NavLink>
       </div>
     </div>
   );

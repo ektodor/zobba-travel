@@ -10,18 +10,27 @@ export function JourneyCard({
   price = 0,
 }) {
   return (
-    <div className="relative max-w-[306px] shrink-0">
+    <div
+      to={"location-search"}
+      className="group relative max-w-[306px] shrink-0"
+    >
       <SVGCoolorComponent
         color={"white"}
         size={6}
         url={"./icons/ic_favorite-default.svg"}
-        otherClass={"absolute top-4 right-4"}
+        otherClass={"absolute top-4 right-4 z-10"}
       />
       <div className="mb-4 overflow-hidden rounded-[20px]">
-        <img src={image} alt="journey" />
+        <img
+          src={image}
+          alt="journey"
+          className="transition-all duration-300 group-hover:scale-110"
+        />
       </div>
       <div>
-        <h4 className="text-title mb-2">{title}</h4>
+        <h4 className="text-title group-hover:text-primary-100 mb-2 transition-all duration-300">
+          {title}
+        </h4>
         <div className="border-neutral-40 border-b pb-4">
           <div className="mb-2 flex gap-2">
             {tags.map((item, index) => {

@@ -151,6 +151,7 @@ export function LocationSearch() {
             </div>
 
             <NavLink
+              to={"/product"}
               className={
                 "btn-default btn-secondary absolute right-3 bottom-3 w-fit"
               }
@@ -178,7 +179,7 @@ export function LocationSearch() {
             熱門分類快速選！
           </h2>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 lg:flex lg:gap-6">
-            <div className="border-neutral-40 w-full overflow-hidden rounded-2xl border">
+            <div className="border-neutral-40 w-full overflow-hidden rounded-2xl border hover:shadow-[0px_4px_40px_0px_#0000001A]">
               <div className="bg-primary-10 flex items-center justify-center py-5">
                 <img
                   src="./images/location/category-1.svg"
@@ -191,7 +192,7 @@ export function LocationSearch() {
                 <p className="text-body2 lg:text-body">20+ 種選擇</p>
               </div>
             </div>
-            <div className="border-neutral-40 w-full overflow-hidden rounded-2xl border">
+            <div className="border-neutral-40 w-full overflow-hidden rounded-2xl border hover:shadow-[0px_4px_40px_0px_#0000001A]">
               <div className="bg-primary-10 flex items-center justify-center py-5">
                 <img
                   src="./images/location/category-2.svg"
@@ -204,7 +205,7 @@ export function LocationSearch() {
                 <p className="text-body2 lg:text-body">50+ 種選擇</p>
               </div>
             </div>
-            <div className="border-neutral-40 w-full overflow-hidden rounded-2xl border">
+            <div className="border-neutral-40 w-full overflow-hidden rounded-2xl border hover:shadow-[0px_4px_40px_0px_#0000001A]">
               <div className="bg-primary-10 flex items-center justify-center py-5">
                 <img
                   src="./images/location/category-3.svg"
@@ -217,7 +218,7 @@ export function LocationSearch() {
                 <p className="text-body2 lg:text-body">70+ 種選擇</p>
               </div>
             </div>
-            <div className="border-neutral-40 w-full overflow-hidden rounded-2xl border">
+            <div className="border-neutral-40 w-full overflow-hidden rounded-2xl border hover:shadow-[0px_4px_40px_0px_#0000001A]">
               <div className="bg-primary-10 flex items-center justify-center py-5">
                 <img
                   src="./images/location/category-4.svg"
