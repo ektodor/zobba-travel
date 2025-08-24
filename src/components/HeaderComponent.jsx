@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router";
+import { NavLink } from "react-router";
 import { OffcanvasComponent } from "./OffcanvasComponent";
 import { useEffect, useState } from "react";
 import { SearchComponent } from "./SearchComponent";
@@ -13,7 +13,7 @@ export function HeaderComponent() {
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
   const [searchState, setSearchState] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { pathname } = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       // 當滾動超過 50px 時改變狀態
@@ -25,7 +25,7 @@ export function HeaderComponent() {
   }, []);
   return (
     <header
-      className={`w-full bg-white ${pathname == "/" ? "lg:fixed lg:top-0" : ""} ${isScrolled ? "" : "lg:bg-transparent"} z-50 transition-all duration-300 ease-in-out`}
+      className={`w-full bg-white lg:fixed lg:top-0 ${isScrolled ? "lg:bg-white/72" : "lg:bg-transparent"} z-50 transition-all duration-300 ease-in-out`}
     >
       <div className="container">
         <div className="flex items-center py-3 lg:py-4">

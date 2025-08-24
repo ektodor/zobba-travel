@@ -290,29 +290,6 @@ export function SVGCoolorComponent({ url, color, size = 6, otherClass }) {
 </section>
 ```
 
-## 卡片 hover 視覺差異
-
-- 使用 `flex` `justify-end` `flex-col` 再加上 `hover` 使用變寬特效會導致視覺上高度變更，可能是因為改變寬度導致內容高度變更，即使固定外部`div`也會有視覺上落差
-
-- justify-end 加劇視覺落差 ( claude 說明 )
-  - 內容靠底部對齊
-  - 當文字行數減少，整個內容區塊會"向上跳"
-  - 視覺上感覺整張卡片高度在變化
-
-- 固定外部 div 無法解決根本問題 ( claude 說明 )
-  - 外層高度固定，但內層內容仍會重排
-  - justify-end 讓內容在固定容器內"浮動"
-  - 視覺落差依然存在
-
-```jsx
-<div className={`relative ...`}>
-  {/* 使用定位可以解決 flex hover 時的視差 */}
-  <div className="absolute right-6 bottom-6 left-6 md:right-8 md:bottom-8 md:left-8">
-    ...
-  </div>
-</div>
-```
-
 ## 圖片路徑問題（圖片位置在 public/...）
 
 - 在本機測試都使用 `/images/..` 都正常，但是部署到 gh-page 會有問題
