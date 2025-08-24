@@ -120,7 +120,7 @@ export function LocationSearch() {
 
   return (
     <main>
-      <section className="py-10 lg:py-20">
+      <section className="py-10 lg:pt-[168px] lg:pb-20">
         <div className="container">
           <div className="text-body gap text-primary-100 mb-10 hidden gap-3 lg:flex">
             <NavLink to={"/"}>首頁</NavLink>/<NavLink to={"/"}>日本</NavLink>/
@@ -239,7 +239,21 @@ export function LocationSearch() {
           <h2 className="text-h3 text-primary-100 lg:text-h1 mb-5 lg:mb-10">
             大阪 TOP 10!
           </h2>
-          <div className="-mx-3">
+          <div className="relative -mx-3">
+            <button className="btn-default btn-secondary group absolute top-1/2 -left-20 hidden border-0 px-4 shadow-[0px_4px_12px_0px] shadow-[#00000026] 2xl:block">
+              <SVGCoolorComponent
+                color={"black"}
+                url={"./icons/ic_ArrowLeft.svg"}
+                size={6}
+              />
+            </button>
+            <button className="btn-default btn-secondary group absolute top-1/2 -right-20 hidden border-0 px-4 shadow-[0px_4px_12px_0px] shadow-[#00000026] 2xl:block">
+              <SVGCoolorComponent
+                color={"black"}
+                url={"./icons/ic_ArrowRight.svg"}
+                size={6}
+              />
+            </button>
             <div className="scrollbar-hide flex gap-6 overflow-scroll px-3">
               {journeyList.map((item) => {
                 return (
@@ -300,7 +314,21 @@ export function LocationSearch() {
               </button>
             </div>
           </div>
-          <div className="-mx-3">
+          <div className="relative -mx-3">
+            <button className="btn-default btn-secondary group absolute top-1/2 -left-20 hidden border-0 px-4 shadow-[0px_4px_12px_0px] shadow-[#00000026] 2xl:block">
+              <SVGCoolorComponent
+                color={"black"}
+                url={"./icons/ic_ArrowLeft.svg"}
+                size={6}
+              />
+            </button>
+            <button className="btn-default btn-secondary group absolute top-1/2 -right-20 hidden border-0 px-4 shadow-[0px_4px_12px_0px] shadow-[#00000026] 2xl:block">
+              <SVGCoolorComponent
+                color={"black"}
+                url={"./icons/ic_ArrowRight.svg"}
+                size={6}
+              />
+            </button>
             <div className="scrollbar-hide flex gap-6 overflow-scroll px-3">
               {journeyList.map((item) => {
                 return (
